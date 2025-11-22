@@ -16,6 +16,7 @@ A beautiful and interactive web application for detecting spam SMS messages usin
 - **ML Model**: Multinomial Naive Bayes
 - **Vectorization**: TF-IDF
 - **NLP**: NLTK (tokenization, stemming, stopwords removal)
+- **Deployment**: Streamlit Cloud / Render / Railway (all FREE)
 
 ## Installation
 
@@ -78,7 +79,7 @@ The application performs the following preprocessing steps:
 
 ## Deployment
 
-### Deploy to Streamlit Cloud
+### Deploy to Streamlit Cloud (FREE & Recommended)
 
 1. Push your code to GitHub
 2. Go to [share.streamlit.io](https://share.streamlit.io)
@@ -86,24 +87,48 @@ The application performs the following preprocessing steps:
 4. Select the FRONTEND/app.py file
 5. Deploy!
 
-### Deploy to Heroku
+**Benefits:**
+- ✅ Completely FREE
+- ✅ HTTPS automatically
+- ✅ Auto-deploy on git push
+- ✅ Easy to manage
 
-1. Create a `Procfile`:
-```
-web: sh setup.sh && streamlit run app.py
-```
+### Deploy to Render (FREE)
 
-2. Create a `setup.sh`:
-```bash
-mkdir -p ~/.streamlit/
-echo "[server]
-headless = true
-port = $PORT
-enableCORS = false
-" > ~/.streamlit/config.toml
-```
+1. Go to [render.com](https://render.com)
+2. Create a new Web Service
+3. Connect your GitHub repository
+4. Build Command: `pip install -r requirements.txt`
+5. Start Command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
 
-3. Deploy using Heroku CLI
+**Benefits:**
+- ✅ FREE tier available
+- ✅ Easy setup
+- ✅ Auto-deploy on push
+
+### Deploy to Railway (FREE)
+
+1. Go to [railway.app](https://railway.app)
+2. Create new project from GitHub repo
+3. Add start command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
+4. Deploy!
+
+**Benefits:**
+- ✅ $5 free credit monthly
+- ✅ Simple deployment
+- ✅ Good performance
+
+### Deploy to PythonAnywhere (FREE)
+
+1. Sign up at [pythonanywhere.com](https://www.pythonanywhere.com)
+2. Upload your files
+3. Set up web app with Streamlit
+4. Configure WSGI file
+
+**Benefits:**
+- ✅ FREE tier available
+- ✅ Good for learning
+- ✅ Python-focused platform
 
 ## Project Structure
 

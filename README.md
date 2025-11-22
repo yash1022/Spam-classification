@@ -148,7 +148,7 @@ The Streamlit web application provides:
 
 ## 🚢 Deployment
 
-### Streamlit Cloud (Recommended)
+### Streamlit Cloud (FREE & Recommended)
 
 1. Push code to GitHub
 2. Visit [share.streamlit.io](https://share.streamlit.io)
@@ -156,13 +156,25 @@ The Streamlit web application provides:
 4. Select `FRONTEND/app.py`
 5. Deploy!
 
-### Heroku
+**Why Streamlit Cloud?**
+- ✅ Completely FREE
+- ✅ Purpose-built for Streamlit apps
+- ✅ HTTPS & custom domains
+- ✅ Auto-deploy on git push
 
-```bash
-cd FRONTEND
-heroku create your-app-name
-git push heroku main
-```
+### Render (FREE Alternative)
+
+1. Sign up at [render.com](https://render.com)
+2. Create new Web Service from GitHub
+3. Build: `pip install -r requirements.txt`
+4. Start: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
+
+### Railway (FREE Alternative)
+
+1. Visit [railway.app](https://railway.app)
+2. Deploy from GitHub
+3. Add start command in settings
+4. Get $5 free credit monthly
 
 ### Local Deployment
 

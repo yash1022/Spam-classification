@@ -24,9 +24,8 @@ Your SMS Spam Classifier frontend is now ready for deployment! Here's what was s
 - **`.streamlit/config.toml`** - Streamlit configuration
 - **`packages.txt`** - NLTK data packages
 
-#### For Heroku
-- **`Procfile`** - Heroku process configuration
-- **`setup.sh`** - Deployment setup script
+#### For Cloud Deployment
+- **`.streamlit/config.toml`** - Streamlit configuration for cloud platforms
 
 #### For Windows Users
 - **`run_app.bat`** - Double-click to launch app
@@ -81,7 +80,7 @@ The app will open at: `http://localhost:8501`
 
 ## 📤 Deployment Options
 
-### Option 1: Streamlit Cloud (FREE & Easiest)
+### Option 1: Streamlit Cloud (FREE & Easiest) ⭐
 1. Push code to GitHub
 2. Go to https://share.streamlit.io
 3. Connect your repository
@@ -89,22 +88,58 @@ The app will open at: `http://localhost:8501`
 5. Click "Deploy"
 
 **Advantages:**
-- ✅ Free hosting
+- ✅ Completely FREE
 - ✅ HTTPS automatically
 - ✅ Easy updates (auto-deploy on push)
 - ✅ No configuration needed
+- ✅ Built specifically for Streamlit
 
-### Option 2: Heroku
-```bash
-cd FRONTEND
-heroku create your-app-name
-git push heroku main
-```
+### Option 2: Render (FREE)
+1. Sign up at https://render.com
+2. Create new "Web Service"
+3. Connect GitHub repository
+4. Build Command: `pip install -r requirements.txt`
+5. Start Command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
 
-### Option 3: Local/VPS Server
+**Advantages:**
+- ✅ FREE tier available
+- ✅ Easy GitHub integration
+- ✅ Auto-deploy on push
+- ✅ Good performance
+
+### Option 3: Railway (FREE)
+1. Go to https://railway.app
+2. Create project from GitHub
+3. Add start command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
+4. Deploy
+
+**Advantages:**
+- ✅ $5 free credit monthly
+- ✅ Simple setup
+- ✅ Fast deployment
+- ✅ Developer-friendly
+
+### Option 4: PythonAnywhere (FREE)
+1. Sign up at https://www.pythonanywhere.com
+2. Upload your code
+3. Configure web app
+4. Set up Streamlit
+
+**Advantages:**
+- ✅ FREE tier available
+- ✅ Python-focused
+- ✅ Educational friendly
+- ✅ SSH access
+
+### Option 5: Local/VPS Server
 ```bash
 streamlit run app.py --server.port 8501 --server.address 0.0.0.0
 ```
+
+**Advantages:**
+- ✅ Full control
+- ✅ No usage limits
+- ✅ Custom configuration
 
 ## 🔧 Configuration
 
@@ -137,9 +172,7 @@ FRONTEND/
 ├── run_app.bat                # Windows launcher
 │
 └── Deployment Files
-    ├── Procfile               # Heroku
-    ├── setup.sh               # Heroku setup
-    └── packages.txt           # System packages
+    └── packages.txt           # System packages for cloud platforms
 ```
 
 ## 🎨 UI Components
